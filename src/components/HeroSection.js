@@ -12,14 +12,14 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center px-6 md:px-20 font-[Poppins] overflow-hidden pt-24 relative"
+      className="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-20 font-[Poppins] overflow-hidden pt-20 sm:pt-24 relative"
     >
-      {/* Background Animated Glow */}
-      <div className="absolute w-[400px] h-[400px] bg-yellow-500 rounded-full opacity-20 blur-3xl top-20 left-10 animate-pulse z-0" />
+      {/* Background Glow */}
+      <div className="absolute w-72 h-72 sm:w-96 sm:h-96 bg-yellow-500 rounded-full opacity-20 blur-3xl top-16 left-6 animate-pulse z-0" />
 
-      {/* Hero Content */}
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-6xl gap-12">
-        {/* Left: Intro Text */}
+      {/* Main Container */}
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-6xl gap-10 sm:gap-12">
+        {/* Left: Text Section */}
         <motion.div
           className="flex-1 text-center md:text-left"
           initial="hidden"
@@ -37,36 +37,36 @@ export default function HeroSection() {
           }}
         >
           <motion.h2
-            className="text-lg text-gray-300 mb-2 tracking-wide"
-            variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+            className="text-base sm:text-lg text-gray-300 mb-1 sm:mb-2 tracking-wide"
+            variants={fadeInUp}
           >
             Hello, I am
           </motion.h2>
 
           <motion.h1
-            className="text-5xl md:text-6xl font-extrabold mb-2"
-            variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+            className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-2"
+            variants={fadeInUp}
           >
             DHILIPRAJ
           </motion.h1>
 
           <motion.h3
-            className="text-3xl md:text-4xl text-yellow-400 font-bold mb-6"
-            variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+            className="text-2xl sm:text-3xl md:text-4xl text-yellow-400 font-bold mb-5 sm:mb-6"
+            variants={fadeInUp}
           >
             Front-End Developer
           </motion.h3>
 
           <motion.button
-            className="rounded-full border-4 border-yellow-400 text-yellow-400 w-16 h-16 flex items-center justify-center hover:bg-yellow-400 hover:text-white transition"
+            className="rounded-full border-4 border-yellow-400 text-yellow-400 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center hover:bg-yellow-400 hover:text-white transition"
             whileHover={{ scale: 1.1 }}
-            variants={{ hidden: { scale: 0.8 }, visible: { scale: 1 } }}
+            variants={fadeInUp}
           >
             ▶
           </motion.button>
         </motion.div>
 
-        {/* Right: Image + Icons Below */}
+        {/* Right: Image and Icons */}
         <motion.div
           className="flex-1 flex flex-col items-center justify-center gap-4"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -74,7 +74,7 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 0.3 }}
         >
           {/* Profile Photo */}
-          <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-yellow-400 shadow-lg">
+          <div className="relative w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-yellow-400 shadow-lg">
             <img
               src={yourPhoto}
               alt="DHILIPRAJ"
@@ -83,9 +83,9 @@ export default function HeroSection() {
             <div className="absolute -inset-2 border-2 border-yellow-300 rounded-full animate-spin-slow opacity-30" />
           </div>
 
-          {/* Contact Icons Below Image */}
+          {/* Contact Icons */}
           <motion.div
-            className="flex gap-6 mt-4"
+            className="flex gap-5 sm:gap-6 mt-4"
             initial="hidden"
             animate="visible"
             variants={{
@@ -95,7 +95,7 @@ export default function HeroSection() {
           >
             <a
               href="mailto:bdhilipraj@gmail.com"
-              className="text-yellow-400 hover:text-yellow-500 transition text-2xl"
+              className="text-yellow-400 hover:text-yellow-500 transition text-xl sm:text-2xl"
               title="Email"
             >
               <FaEnvelope />
@@ -104,7 +104,7 @@ export default function HeroSection() {
               href="https://www.linkedin.com/in/dhilipraj-b-07b44b27b"
               target="_blank"
               rel="noreferrer"
-              className="text-yellow-400 hover:text-yellow-500 transition text-2xl"
+              className="text-yellow-400 hover:text-yellow-500 transition text-xl sm:text-2xl"
               title="LinkedIn"
             >
               <FaLinkedinIn />
@@ -113,7 +113,7 @@ export default function HeroSection() {
               href="https://github.com/dhilipraj12"
               target="_blank"
               rel="noreferrer"
-              className="text-yellow-400 hover:text-yellow-500 transition text-2xl"
+              className="text-yellow-400 hover:text-yellow-500 transition text-xl sm:text-2xl"
               title="GitHub"
             >
               <FaGithub />

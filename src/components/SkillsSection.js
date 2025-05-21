@@ -8,7 +8,7 @@ const projects = [
   { title: "HTML & CSS", icon: <FaHtml5 size={40} />, color: "text-yellow-400" },
   { title: "JavaScript", icon: <FaJs size={40} />, color: "text-yellow-400" },
   { title: "React.js", icon: <SiReact size={40} />, color: "text-yellow-400" },
-  { title: "Python Tools", icon: <SiPython size={40} />, color: "text-yellow-400" },
+  { title: "Python", icon: <SiPython size={40} />, color: "text-yellow-400" },
 ];
 
 const fadeInUp = {
