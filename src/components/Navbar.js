@@ -69,7 +69,7 @@ export default function Navbar() {
                   className="absolute top-8 right-0 mt-2 bg-gray-800 border border-gray-600 rounded-md p-2 shadow-lg z-50 w-48"
                 >
                   <a
-                    href="/Dhilip_Raj_Resume.pdf"
+                    href="/Dhilipraj-Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block px-4 py-2 text-sm hover:bg-gray-700 rounded"
